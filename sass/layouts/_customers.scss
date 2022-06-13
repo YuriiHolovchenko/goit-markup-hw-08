@@ -1,0 +1,51 @@
+/* Секція "Постійні клієнти" */
+.customers {
+    padding-top: 92px;
+    padding-bottom: 92px;
+}
+
+.customers__section-title {
+    margin-bottom: 50px;
+}
+
+.customers__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customers__item {
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.customers__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    transition: border-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    }
+    
+    &:hover .customers__icon,
+    &:focus .customers__icon {
+        fill: var(--accent-color);
+    }
+}
+
+.customers__icon {
+    fill: #AFB1B8;
+    transition: fill 250ms var(--timing-function);
+}

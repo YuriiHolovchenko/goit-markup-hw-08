@@ -1,0 +1,19 @@
+:root {
+    /*    Шрифти    */
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    /*    Колір тексту    */
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --third-text-color: #FFFFFF;
+    --accent-color: #2196f3;
+    /*    Колір фону    */
+    --primary-bg-color: #FFFFFF;
+    --secondary-bg-color: #F5F4FA;
+    --third-bg-color: #2F303A;
+    /*    Сітка    */
+    --items: 2;
+    --indent: 30px;
+    /*  Час затримки анімації*/
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,73 @@
+/*    Підписатись на розсилку */
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.subscribe-form__field {
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-form__field:focus-within {
+    outline: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+}
+
+.subscribe-form__input {
+    height: 50px;
+    min-width: 360px;
+    padding-left: 16px;
+
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    outline: transparent;
+
+    &:focus+.subscribe-form__label,
+    &:not(:placeholder-shown)+.subscribe-form__label {
+        transform: translate(-150%, -50%);
+    }
+}
+
+.subscribe-form__label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+
+    transform: translate(0, -50%);
+    transition: transform 250ms var(--timing-function);
+}
+
+.subscribe-form__btn {
+    position: relative;
+
+    margin: 0 0 0 12px;
+    padding: 10px 60px 10px 30px;
+}
+
+.subscribe-form__btn-icon {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    fill: #FFFFFF;
+}

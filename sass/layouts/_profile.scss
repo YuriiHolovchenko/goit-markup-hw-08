@@ -1,0 +1,38 @@
+/* Секція "Чим ми займаємось" */
+.profile {
+    padding-bottom: 94px;
+}
+
+.profile__item {
+    position: relative;
+    --items: 3;
+}
+
+.profile__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile__section-title {
+    margin-bottom: 50px;
+}
+
+.profile__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    text-align: center;
+    padding: 27px 0;
+    width: 100%;
+    height: 70px;
+    color: var(--third-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}

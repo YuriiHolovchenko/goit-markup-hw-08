@@ -1,0 +1,224 @@
+/* ============================== */
+/*         Модальне вікно         */
+/* ============================== */
+
+.modal-form__section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 580px;
+    width: 530px;
+    background-color: #fff;
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms var(--timing-function);
+}
+
+.modal-form__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opasity 250ms var(--timing-function),
+        visibility 250ms var(--timing-function);
+}
+
+.modal-form__backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-form__backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-form__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+
+}
+
+/*       F  o  r  m         */
+.modal-form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 40px;
+}
+
+.modal-form__field {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &:focus-within .modal-form__input{
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.modal-form__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+.modal-form__container {
+    position: relative;
+}
+
+.modal-form__input {
+    width: 100%;
+    padding: 11px 10px 11px 42px;
+    margin: 0;
+
+    font: inherit;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    &:not(:placeholder-shown) {
+        border: 1px solid var(--accent-color);
+    }
+    
+    &:focus {
+        outline: var(--accent-color);
+    }
+    
+    &:focus~.modal-form__icon,
+    &:not(:placeholder-shown)~.modal-form__icon {
+        fill: var(--accent-color);
+    }
+    
+    /* Ефект Hover на комірках форми */
+    &:hover {
+        border: 1px solid var(--accent-color);
+        cursor: pointer;
+    }
+    
+    &:hover~.modal-form__icon {
+        fill: var(--accent-color);
+    }
+}
+
+/* Заголовки рядків форми */
+.modal-form__label {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);
+}
+
+/* Вирівнювання іконок */
+.modal-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+/* Налаштування текстового поля зворотнього звязку */
+.modal-form__textarea {
+    resize: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* "галочка" чекбокс */
+.modal-form__checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.modal-form__checkbox {
+    appearance: none;
+
+    &:checked+.modal-form__checkbox--custom .modal-form__checkbox-icon {
+    opacity: 1;
+    }
+
+    &:checked+.modal-form__checkbox--custom {
+    outline-color: var(--accent-color);
+    background-color: var(--accent-color);
+    }
+
+    &:focus+.modal-form__checkbox--custom {
+    outline-color: var(--accent-color);
+    }
+}
+
+
+
+.modal-form__checkbox--custom {
+    position: absolute;
+    padding: 0;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 15px;
+
+    border-radius: 2px;
+    outline: 2px solid var(--primary-text-color);
+    outline-offset: -2px;
+
+    transition: outline-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+
+.modal-form__checkbox-icon {
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function),
+}
+
+.modal-form__polyce {
+    color: var(--secondary-text-color);
+}
+
+.modal-form__contract {
+    color: var(--accent-color);
+
+    &:focus {
+    outline: 1px solid var(--accent-color);
+    }
+}
+
+
+
+/* ================================== */

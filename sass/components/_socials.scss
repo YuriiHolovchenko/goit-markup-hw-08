@@ -1,0 +1,71 @@
+/* Секція "Команда" - Соц.мережі */
+.social-net {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-net__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+
+    &:hover .social-net__icon,
+    &:focus .social-net__icon {
+        fill: var(--third-text-color);
+    }
+}
+
+.social-net__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.social-net__icon {
+    fill: #AFB1B8;
+    transition: fill 250ms var(--timing-function);
+}
+
+/*  Соцсети "темная сторона" */
+.social-net__link--dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+
+    &:hover .social-net__icon--dark,
+    &:focus .social-net__icon--dark {
+        fill: var(--third-text-color);
+    }
+}
+
+
+
+.social-net__icon--dark {
+    fill: var(--third-text-color);
+    transition: fill 250ms var(--timing-function);
+}

@@ -1,0 +1,71 @@
+/* ============================== */
+/*         F o o t e r            */
+/* ============================== */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background: var(--third-bg-color);
+}
+
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.address {
+    line-height: 1.71;
+    font-style: normal;
+}
+
+.address__container {
+    margin-right: 70px;
+}
+
+.address__item {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.address__item:last-child {
+    margin-bottom: 0;
+}
+
+.address__map {
+    text-decoration: none;
+    color: var(--third-text-color);
+}
+
+.address__mail,
+.address__tel {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/*  Присоединяйтесь */
+.call {
+    margin-right: 93px;
+}
+
+.call__title,
+.subscribe__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--third-text-color);
+}
