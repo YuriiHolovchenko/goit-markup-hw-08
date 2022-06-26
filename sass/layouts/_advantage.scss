@@ -1,7 +1,42 @@
 /* Секція "Переваги" */
 .advantage {
+    @include mq(desktop){
     padding-top: 94px;
     padding-bottom: 94px;
+    }
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+// .advantage__list {
+
+  
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+.advantage__item {
+    @include mq(mobile){
+    --items: 1;
+    width: 450px;
+    }
+
+    @include mq(tablet){
+    --items: 2;
+    width: 354px;
+    }
+
+    @include mq(desktop){
+    --items: 4;
+    width: 270px;
+    }
+}
+
+.advantage__item {
+    // margin-bottom: 10px;
+    color: var(--primary-text-color);
 }
 
 .advantage__picture-box {
@@ -9,7 +44,7 @@
     align-items: center;
     justify-content: center;
     background-color: #F5F4FA;
-    width: 270px;
+    // width: 270px;
     height: 120px;
     margin-bottom: 30px;
 }
@@ -19,23 +54,13 @@
     --color2: var(--accent-color);
 }
 
-.advantage__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.advantage__item {
-    --items: 4;
-    width: 270px;
-}
-
-.advantage__item {
-    margin-bottom: 10px;
-    color: var(--primary-text-color);
-}
 
 .advantage__title {
+    @include mq(mobile-only){
+        text-align: center;
+    }
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

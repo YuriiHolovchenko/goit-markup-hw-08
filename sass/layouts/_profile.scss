@@ -1,17 +1,18 @@
 /* Секція "Чим ми займаємось" */
 .profile {
+    display: none;
     padding-bottom: 94px;
+}
+
+.profile__list {
+    display: none;
+    // align-items: center;
+    // justify-content: space-between;
 }
 
 .profile__item {
     position: relative;
     --items: 3;
-}
-
-.profile__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .profile__section-title {
