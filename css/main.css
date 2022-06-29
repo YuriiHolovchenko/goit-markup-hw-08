@@ -85,17 +85,17 @@ img {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 450px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 
@@ -754,6 +754,7 @@ img {
 }
 
 .advantage__title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -774,22 +775,24 @@ img {
 .profile {
   padding-bottom: 94px;
 }
-
-.profile__item {
-  position: relative;
-  --items: 3;
+@media screen and (max-width: 1199.98px) {
+  .profile {
+    display: none;
+  }
 }
 
 .profile__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.profile__item {
+  position: relative;
+  --items: 3;
 }
 
 .profile__section-title {
@@ -815,13 +818,24 @@ img {
 
 /* Секція "Команда" */
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background: var(--secondary-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__section-title {
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
@@ -837,16 +851,35 @@ img {
 }
 
 .team__item {
-  --items: 4;
   background: var(--primary-bg-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+@media screen and (min-width: 480px) {
+  .team__item {
+    --items: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    --items: 4;
+  }
+}
 
 .team__member-box {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__member-box {
+    padding-bottom: 30px;
+  }
 }
 
 .team__member-name {
@@ -867,31 +900,39 @@ img {
 
 /* Секція "Постійні клієнти" */
 .customers {
-  padding-top: 92px;
-  padding-bottom: 92px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
 }
 
 .customers__section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .customers__section-title {
+    margin-bottom: 50px;
+  }
 }
 
-.customers__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (min-width: 480px) {
+  .customers__item {
+    --items: 2;
+  }
 }
-
-.customers__item {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .customers__item {
+    --items: 3;
+  }
 }
-.customers__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .customers__item {
+    --items: 6;
+  }
 }
 
 .customers__link {
@@ -904,12 +945,26 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   -webkit-transition: border-color 250ms var(--timing-function);
   transition: border-color 250ms var(--timing-function);
+}
+@media screen and (min-width: 480px) {
+  .customers__link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customers__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers__link {
+    width: 170px;
+  }
 }
 .customers__link:hover, .customers__link:focus {
   border-color: var(--accent-color);

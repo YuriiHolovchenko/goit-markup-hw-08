@@ -1,12 +1,21 @@
 /* Секція "Команда" */
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background: var(--secondary-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+   
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }  
 }
 
 .team__section-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
@@ -16,7 +25,16 @@
 }
 
 .team__item {
-    --items: 4;
+    @include mq(mobile) {
+        --items: 1;
+        }
+    @include mq(tablet) {
+        --items: 2;
+    }
+    @include mq(desktop) {
+        --items: 4;
+    }
+    
     background: var(--primary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -26,7 +44,11 @@
 
 .team__member-box {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @include mq(desktop){
+        padding-bottom: 30px;
+    }
 }
 
 .team__member-name {

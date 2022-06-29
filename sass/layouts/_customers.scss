@@ -1,33 +1,60 @@
 /* Секція "Постійні клієнти" */
 .customers {
-    padding-top: 92px;
-    padding-bottom: 92px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @include mq(desktop) {
+        padding-top: 92px;
+        padding-bottom: 92px;
+    }
 }
 
 .customers__section-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        margin-bottom: 50px;
+    }
 }
 
-.customers__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+// .customers__list {
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+// }
 
 .customers__item {
-    margin-right: 30px;
-
-    &:last-child {
-        margin-right: 0;
-    }
+    
+         @include mq(mobile) {
+             --items: 2;
+         }
+    
+         @include mq(tablet) {
+             --items: 3;
+         }
+    
+         @include mq(desktop) {
+             --items: 6;
+         }
 }
 
 .customers__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 92px;
+
+    @include mq(mobile) {
+        width: 210px;
+    }
+    
+    @include mq(tablet) {
+        width: 226px;
+    }
+    
+    @include mq(desktop) {
+        width: 170px;
+    }
+        height: 92px;
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;

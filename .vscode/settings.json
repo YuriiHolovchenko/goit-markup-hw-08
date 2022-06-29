@@ -20,5 +20,13 @@
         "> 1%",
         "last 2 versions"
     ],
-    "editor.guides.bracketPairs": true
+    "editor.guides.bracketPairs": true,
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#e2ff07"
+    },
 }

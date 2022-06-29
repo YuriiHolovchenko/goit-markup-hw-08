@@ -1,13 +1,14 @@
 /* Секція "Чим ми займаємось" */
 .profile {
-    display: none;
+    @include mq(not-desktop) {
+            display: none;
+        }
     padding-bottom: 94px;
 }
 
 .profile__list {
-    display: none;
-    // align-items: center;
-    // justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .profile__item {
