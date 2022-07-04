@@ -6,9 +6,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    max-width: 450px;
+    padding-bottom: 20px;
 
-    height: 580px;
-    width: 530px;
+    @include mq(desktop){
+        max-width: 528px;
+    }
+
     background-color: #fff;
     border-radius: 4px;
 
@@ -25,6 +30,8 @@
     height: 100%;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.2);
+
+    overflow-y: scroll;
 
     opacity: 1;
     transition: opasity 250ms var(--timing-function),
@@ -209,6 +216,10 @@
 
 .modal-form__polyce {
     color: var(--secondary-text-color);
+
+    @include mq(not-desktop){
+        font-size: 12px;
+    }
 }
 
 .modal-form__contract {

@@ -1,8 +1,8 @@
 // utils
-
+@import './utils/mixin';
 @import './utils/vars';
 @import './utils/visually-hidden';
-@import './utils/mixin';
+
 
 // base styles
 @import './base/common';
@@ -16,6 +16,7 @@
 @import './components/socials';
 @import './components/logo';
 @import './components/subscribe';
+@import './components/menu';
 
 // layuots
 @import './layouts/header';

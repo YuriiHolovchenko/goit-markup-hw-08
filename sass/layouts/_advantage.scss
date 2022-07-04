@@ -17,9 +17,12 @@
 // }
 
 .advantage__item {
-    @include mq(mobile){
     --items: 1;
-    width: 450px;
+    // width: 100%;
+    
+    @include mq(mobile){
+        --items: 1;
+        width: 450px;
     }
 
     @include mq(tablet){

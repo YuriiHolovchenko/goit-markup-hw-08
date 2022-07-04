@@ -25,9 +25,8 @@
 }
 
 .team__item {
-    @include mq(mobile) {
-        --items: 1;
-        }
+    --items: 1;
+
     @include mq(tablet) {
         --items: 2;
     }
