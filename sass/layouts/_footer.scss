@@ -3,20 +3,32 @@
 /* ============================== */
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
     padding-top: 60px;
     padding-bottom: 60px;
 
     background: var(--third-bg-color);
+    
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-wrap: wrap;
 }
 
 .footer__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(tablet){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @include mq(desktop){
+        flex-direction: row;
+        align-items: baseline;
+    }
+
 }
 
 .footer__logo {
@@ -30,12 +42,19 @@
 }
 
 .address__container {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // margin-right: 70px;
+    margin-bottom: 60px;
 }
 
 .address__item {
     display: block;
-    margin-bottom: 9px;
+    text-align: center;
+    margin-bottom: 8px;
+    // margin-bottom: 9px;
 }
 
 .address__item:last-child {
@@ -55,7 +74,8 @@
 
 /*  Присоединяйтесь */
 .call {
-    margin-right: 93px;
+    margin-bottom: 60px;
+    // margin-right: 93px;
 }
 
 .call__title,
@@ -66,6 +86,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 20px;
     color: var(--third-text-color);
 }

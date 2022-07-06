@@ -1,16 +1,24 @@
 /*    Підписатись на розсилку */
 
+
 .subscribe-form {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include mq(desktop){
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    
 }
 
 .subscribe-form__field {
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .subscribe-form__field:focus-within {
@@ -19,9 +27,13 @@
 }
 
 .subscribe-form__input {
+    
+    width: 450px;
     height: 50px;
-    min-width: 360px;
     padding-left: 16px;
+    @include mq(desktop){
+        width: 358px;
+    }
 
     font: inherit;
     font-size: 16px;
