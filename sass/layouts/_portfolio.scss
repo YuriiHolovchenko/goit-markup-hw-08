@@ -60,7 +60,17 @@
 
 /* Портфоліо - картки */
 .portfolio-card__list{
-    --items: 3;    
+    @include mq(mobile-only) {
+            --items: 1;
+        }
+    
+        @include mq(tablet) {
+            --items: 2;
+        }
+    
+        @include mq(desktop) {
+            --items: 3;
+        }
 }
 .portfolio-card__item{
     background: var(--primary-bg-color);    

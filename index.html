@@ -23,10 +23,10 @@
 <body>
   <!-- Шапка  сайту-->
   <header class="header">
-    <div class="header__container container">
-      <a href="./index.html" class="header__logo logo">Web<span class="logo--black">Studio</span> </a>
-      <nav class="navigation">
-                  <button type="button" class="menu__button " aria-expanded="false" aria-controls="menu-container"
+    <div class="header__container container" aria-expanded="false" aria-controls="menu-container" data-logo>
+      <a href="./index.html" class="header__logo logo" >Web<span class="logo--black">Studio</span> </a>
+      <nav class="navigation" >       
+          <button type="button" class="menu__button " aria-expanded="false" aria-controls="menu-container"
               data-menu-button>
               <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
                  <use class="menu__icon" href="./images/sprite.svg#icon-menu"></use>
@@ -48,7 +48,7 @@
                         <a class="navigation__link" href="#contacts">Контакты</a>
                       </li>
                     </ul>
-            </div>
+          </div>
           <!-- Контакти -->
           <div class="header-contacts__container">
             <ul class="header-contacts__list list">
@@ -68,6 +68,32 @@
               </li>
             </ul>
           </div>
+          <!-- Соц мережі -->
+          <div class="social-links__container">
+          <ul class="social-links__list  list">
+          <li class="social-links__item">
+            <a class="social-links__link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              instagram
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter">
+              twitter
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+              facebook
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+              linkedin
+            </a>
+          </li>
+        </ul>
+          </div>
+          <!-- -------------------------- -->
         </div>
       </nav>
     </div>

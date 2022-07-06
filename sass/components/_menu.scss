@@ -8,6 +8,7 @@
     // font-size: 20px;    
 
     // width: auto;
+    z-index: 2;
     @include mq(mobile-only){
         display: none;
 
@@ -65,16 +66,6 @@
     display: none;
 }
 
-.menu__button.is-open .header__logo {
+.header__container.is-hidden .header__logo{
     display: none;
 }
-
-// @include mq(mobile-only){ 
-// .menu__button.is-open,
-// .header__logo .logo.is-open {
-//     display: block;
-// }
-
-// .header__logo .logo.is-hidden {
-//     display: none;
-// }}
