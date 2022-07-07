@@ -20,7 +20,11 @@
         padding: 0 40px;
 
         &.is-open {
-        display: block;
+        // display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
         } 
     }
 
@@ -67,5 +71,7 @@
 }
 
 .header__container.is-hidden .header__logo{
-    display: none;
+    @include mq(mobile-only){
+      display: none;  
+    }
 }

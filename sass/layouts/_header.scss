@@ -72,11 +72,12 @@
     line-height: 1.175;
     
     color: var(--primary-text-color);
-    transition: color 250ms var(--timing-function);    
+    transition: color 250ms var(--timing-function);  
+
     @include mq(mobile-only){
-      &:last-child{
-        padding-bottom: 0;
-    }  
+    //   &:last-child{
+    //     padding-bottom: 0;
+    // }  
     }
     
     
@@ -175,6 +176,7 @@
 
 .header-contacts__link--tel{
     @include mq(mobile-only) {
+        display: block;
         margin-bottom: 32px;
         
         font-weight: 500;
@@ -187,6 +189,7 @@
 }
 .header-contacts__link--mail{
     @include mq(mobile-only) {
+        display: block;
         margin-bottom: 64px;
 
         font-weight: 500;

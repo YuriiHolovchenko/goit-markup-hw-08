@@ -463,12 +463,6 @@ img {
   transition: fill 250ms var(--timing-function);
 }
 
-@media screen and (min-width: 768px) {
-  .social-links__container {
-    display: none;
-  }
-}
-
 .social-links__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -476,9 +470,16 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .social-links__list {
+    display: none;
+  }
 }
 
 .social-links__link {
+  display: block;
   margin-right: 10px;
   padding-right: 10px;
   font-weight: 500;
@@ -487,12 +488,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--accent-color);
-  border-right: 2px solid rgba(255, 0, 0, 0.905);
-}
-.social-links__link:nth-child(4) {
-  border: none;
-  margin: 0;
-  padding: 0;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 /* логотип */
@@ -640,7 +636,19 @@ img {
     padding: 0 40px;
   }
   .menu__container.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
@@ -703,8 +711,10 @@ img {
   display: none;
 }
 
-.header__container.is-hidden .header__logo {
-  display: none;
+@media screen and (max-width: 767.98px) {
+  .header__container.is-hidden .header__logo {
+    display: none;
+  }
 }
 
 /* ============================== */
@@ -787,11 +797,6 @@ img {
   color: var(--primary-text-color);
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
-}
-@media screen and (max-width: 767.98px) {
-  .navigation__link:last-child {
-    padding-bottom: 0;
-  }
 }
 .navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
@@ -907,6 +912,7 @@ img {
 
 @media screen and (max-width: 767.98px) {
   .header-contacts__link--tel {
+    display: block;
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 34px;
@@ -918,6 +924,7 @@ img {
 
 @media screen and (max-width: 767.98px) {
   .header-contacts__link--mail {
+    display: block;
     margin-bottom: 64px;
     font-weight: 500;
     font-size: 24px;
