@@ -28,9 +28,11 @@
 
 .subscribe-form__input {
     
-    width: 450px;
+    width: 90vw;
+    max-width: 450px;
     height: 50px;
     padding-left: 16px;
+
     @include mq(desktop){
         width: 358px;
     }
@@ -71,9 +73,11 @@
 
 .subscribe-form__btn {
     position: relative;
-
-    margin: 0 0 0 12px;
     padding: 10px 60px 10px 30px;
+    
+    @include mq(tablet){
+        margin: 0 0 0 12px;
+    }
 }
 
 .subscribe-form__btn-icon {

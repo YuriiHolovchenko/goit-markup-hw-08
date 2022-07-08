@@ -5,14 +5,19 @@
     margin-left: auto;
     margin-right: auto;
 
+    // width: 100%;
+    // display: flex;
+    // // display: block;
+    // // align-items: center;
+
     @include mq(mobile){
-        width: 480px;
+        max-width: 480px;
     }
     @include mq(tablet){
-        width: 768px;
+        max-width: 768px;
     }
     @include mq(desktop){
-        width: 1200px;
+        max-width: 1200px;
     }
 
     

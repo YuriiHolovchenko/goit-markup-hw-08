@@ -4,8 +4,14 @@
 /* ============================== */
 
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
 }
 
 /* Портфолио - кнопки */
@@ -43,14 +49,31 @@
     background-color: var(--accent-color);
 }
 .portfolio__btn-list{
+    
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
+    margin-bottom: 25px;
+
+
+    @include mq(tablet){
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    }
+        @include mq(desktop) {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
 }
+
 .portfolio__btn-item{
     margin-right: 8px;
+    margin-bottom: 15px;
 
+    @include mq(tablet){
+        margin-bottom: 0;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -62,6 +85,7 @@
 .portfolio-card__list{
     @include mq(mobile-only) {
             --items: 1;
+            --indent: 0;
         }
     
         @include mq(tablet) {
@@ -73,7 +97,8 @@
         }
 }
 .portfolio-card__item{
-    background: var(--primary-bg-color);    
+    background: var(--primary-bg-color);
+    margin-bottom: 30px;
 }
 .portfolio-card__link {
     text-decoration: none;
