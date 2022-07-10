@@ -60,12 +60,6 @@
 }
 
 .hero__title {
-    @include mq(desktop){
-        width: 696px;
-        font-size: 44px;
-        line-height: 1.36;
-    }
-    
     margin-right: auto;
     margin-left: auto;
     max-width: 360px;
@@ -78,4 +72,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--third-text-color);
+    
+    @include mq(desktop){
+        max-width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
