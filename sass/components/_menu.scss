@@ -1,13 +1,6 @@
 /* кнопка меню (mobile) */
 .menu__container {
     background-color: #fff;
-    // position: relative;
-    
-    
-    // text-align: center;
-    // font-size: 20px;    
-
-    // width: auto;
     z-index: 2;
     @include mq(mobile-only){
         display: none;
@@ -20,7 +13,6 @@
         padding: 0 40px;
 
         &.is-open {
-        // display: block;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -64,6 +56,13 @@
 
 .menu__button.is-open .menu__icon--close {
     display: block;
+
+    &:hover, :focus {
+        fill: var(--accent-color);
+        & .navigation__link--current{
+            color: var(--primary-text-color);
+        }
+    }
 }
 
 .menu__button.is-open .menu__icon{

@@ -497,6 +497,12 @@ img {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+.social-links__item:last-child a {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* логотип */
 .logo {
   color: var(--accent-color);
@@ -716,6 +722,12 @@ img {
 
 .menu__button.is-open .menu__icon--close {
   display: block;
+}
+.menu__button.is-open .menu__icon--close:hover, .menu__button.is-open .menu__icon--close :focus {
+  fill: var(--accent-color);
+}
+.menu__button.is-open .menu__icon--close:hover .navigation__link--current, .menu__button.is-open .menu__icon--close :focus .navigation__link--current {
+  color: var(--primary-text-color);
 }
 
 .menu__button.is-open .menu__icon {
