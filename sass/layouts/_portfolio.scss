@@ -103,6 +103,7 @@
 .portfolio-card__link {
     text-decoration: none;
     transition: box-shadow 250ms var(--timing-function);
+    
 
     &:hover,
     &:focus {
@@ -119,6 +120,7 @@
 .portfolio-card__window{
     position: relative;
     overflow: hidden;
+    
 }
 .portfolio-card__overlay{
     position: absolute;
